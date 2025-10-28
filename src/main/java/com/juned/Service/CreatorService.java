@@ -21,7 +21,7 @@ import com.juned.Responses.CheckQuizStart;
 public class CreatorService {
 @Autowired
 private QuizRepo quizrepo;
-@Value("${spring.mail.username}")
+@Value("${MAIL_USERNAME}")
 private String senderMail;
 @Autowired
 JavaMailSender javaMailSender;

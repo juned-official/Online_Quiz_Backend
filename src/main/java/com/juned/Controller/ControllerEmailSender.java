@@ -19,7 +19,7 @@ import com.juned.Service.CreatorService;
 public class ControllerEmailSender {
 	
 
-		@Value("${spring.mail.username}")
+		@Value("${MAIL_USERNAME}")
 		private String senderMail;
 		@Autowired
 		JavaMailSender javaMailSender;
