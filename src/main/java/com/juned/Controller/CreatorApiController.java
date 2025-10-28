@@ -51,24 +51,7 @@ public ResponseEntity<CheckQuizStart> deleteQuiz(@PathVariable Long quizID){
 public ResponseEntity<Long> createQuiz(@RequestBody Quiz Myquiz){
 	
 return   quizservice.AddQuiz(Myquiz);
-//	System.out.println(Myquiz.getUserId());
-//	
-//	
-//	
-//	System.out.println(Myquiz.getTitle());
-//	System.out.println(Myquiz.getIsStarted());
-//	Myquiz.getQuestion().forEach(q->{
-//		System.out.println("QuestionType-> "+q.getQuestionType());
-//		System.out.println(""+q.getText());
-//		q.getOptions().forEach(x->{
-//			System.out.println(x.getOptionText());
-//			System.out.println(x.getIsCorrect());
-//		});
-//
-//	});
-//	System.out.println("***************************************************");
-//	
-//	return   ResponseEntity.ok(100l);
+
 	
 }
 @PutMapping("/toggleQuiz")

@@ -10,9 +10,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
-import com.juned.ErrorResponse;
 import com.juned.DTO.EmailRequest;
-import com.juned.DTO.QuizDTO;
 import com.juned.Entity.Quiz;
 import com.juned.Entity.User_entity;
 import com.juned.Repository.QuizRepo;
@@ -35,14 +33,6 @@ private UserRepo userRepo;
 	}
 	public ResponseEntity<Long> AddQuiz(Quiz myquiz) {
 		
-//		Quiz quiz=new Quiz();
-//		Optional<User_entity> user=userRepo.findById(myquiz.getUserId());
-//		if(user.isPresent()) {
-//			quiz.setUser(user.get());
-//			quiz.setTitle(myquiz.getTitle());
-//			quiz.setIsStarted(myquiz.getIsStarted());
-//			quiz.setQuestions(myquiz.getQuestion());
-//		}
 		Optional<User_entity> user=userRepo.findById(myquiz.getUserId());
 		if(user.isPresent()) {
 		myquiz.setUser(user.get());

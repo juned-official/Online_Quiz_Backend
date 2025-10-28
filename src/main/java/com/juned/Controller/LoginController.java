@@ -57,7 +57,6 @@ public ResponseEntity<User_entity> AddUser(@RequestBody User_entity user){
 }
 @DeleteMapping("/DeleteUser/{userId}")
 public ResponseEntity<CheckQuizStart> deleteUser(@PathVariable Long userId){
-	CheckQuizStart obj=new CheckQuizStart();
 	userRepo.deleteById(userId);
 	return ResponseEntity.ok(new CheckQuizStart("Account Deletion process completed",true));
 }

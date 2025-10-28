@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 
 import com.juned.Entity.Quiz;
-import com.juned.Entity.User_entity;
+
 @Repository
 public interface QuizRepo extends JpaRepository<Quiz, Long> {
 
